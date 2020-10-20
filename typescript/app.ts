@@ -1,15 +1,24 @@
 //funcion anomina no invicada
 (function(){
-function saludar( nombre: string ) {
-    console.table( 'Hola, ' + nombre ); // Hola Logan
-}
 
+    let mensaje:string ='Hola'
+    let numero: number =123;
+    let booleano: boolean=true;
+    let hoy: Date= new Date();
+    
+    let cualquiercosa;
+    cualquiercosa = mensaje;
+    cualquiercosa = numero;
+    cualquiercosa = booleano
+    cualquiercosa = hoy;
 
-const wolverine = {
-    nombre: 'Logan'
-};
+    let spiderman = {
+        nombre: 'Peter',
+        edad : 30
+    };
 
-
-saludar(wolverine.nombre);
-
+    spiderman = {
+        nombre: 'Juan',
+        edad: 40,
+    }
 })();
