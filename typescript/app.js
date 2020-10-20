@@ -1,7 +1,8 @@
-//funcion anomina no invocada
-(function() {
+"use strict";
+//funcion anomina no invicada
+(function () {
     function saludar(nombre) {
-        console.table('Hola ' + nombre); // Hola Logan
+        console.table('Hola, ' + nombre); // Hola Logan
     }
     var wolverine = {
         nombre: 'Logan'
