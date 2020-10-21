@@ -1,21 +1,14 @@
 "use strict";
 //funcion anomina no invicada
 (function () {
-    var mensaje = 'Hola';
-    var numero = 123;
-    var booleano = true;
-    var hoy = new Date();
-    var cualquiercosa;
-    cualquiercosa = mensaje;
-    cualquiercosa = numero;
-    cualquiercosa = booleano;
-    cualquiercosa = hoy;
-    var spiderman = {
-        nombre: 'Peter',
-        edad: 30
-    };
-    spiderman = {
-        nombre: 'Juan',
-        edad: 40,
-    };
+    function getEdad() {
+        return 100 + 100 + 300;
+    }
+    var nombre = "Edual";
+    var apellido = "Sarmiento";
+    var edad = 22;
+    //Edual Sarmiento (Edad: 33)
+    //const salida = nombre +" "+ apellido +" ("+edad+")";
+    var salida = nombre + " \n" + apellido + " \n( " + getEdad() + " )";
+    console.log(salida);
 })();
