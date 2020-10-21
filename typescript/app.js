@@ -1,14 +1,14 @@
 "use strict";
 //funcion anomina no invicada
 (function () {
-    function getEdad() {
-        return 100 + 100 + 300;
+    function activar(quien, momento, objeto) {
+        if (objeto === void 0) { objeto = 'batiseñal'; }
+        if (momento) {
+            console.log(quien + " activ\u00F3 la " + objeto + " en la " + momento);
+        }
+        else {
+            console.log(quien + " activ\u00F3 la " + objeto);
+        }
     }
-    var nombre = "Edual";
-    var apellido = "Sarmiento";
-    var edad = 22;
-    //Edual Sarmiento (Edad: 33)
-    //const salida = nombre +" "+ apellido +" ("+edad+")";
-    var salida = nombre + " \n" + apellido + " \n( " + getEdad() + " )";
-    console.log(salida);
+    activar('Gordon', 'batiseñal', 'tarde');
 })();
