@@ -1,25 +1,44 @@
 //funcion anomina no invicada
-(function () {
-  const niFuncion = function(a: string){
-    return a;
+( () => {
+  const avenger = {
+    nombre: 'Steve',
+    clave: 'Capitan América',
+    poder: 'Droga'
   }
-  const miFuncioF = (a: string) => a.toUpperCase();
+  //No importa el orden
+  const { nombre, clave, poder } = avenger;
+  console.log( 'Mediante acceso al objeto.');
+  console.log( avenger.nombre );
+  console.log( avenger.clave );
+  console.log( avenger.poder );
+  
+  console.log('Mediante destruracion del objeto.');
+  console.log( nombre );
+  console.log( clave );
+  console.log( poder );
 
-  const sumarN = function( a: number, b: number){
-    return a + b;
+  const extraer = ({ nombre, poder}: any ) => {
+    //const { nombre, poder } = avenger;
+    console.log( nombre );
+    console.log( poder );
   }
-  const sumarF = (a: number, b: number) => a+b;
+  //extraer(avenger);
 
-  console.log(sumarN(4,5));
-  console.log(sumarF(4,5));
+  const avengers: string [] = ['Thor', 'Iron Man', 'Spiderman'];
+  console.log( avengers[0] );
+  console.log( avengers[1] );
+  console.log( avengers[2] );
 
-  const hulk = {
-    nombre: 'Hulk',
-    smash() {
-      setTimeout( () => {
-        console.log(`${this.nombre} smash!!!!`);
-      }, 1000);
-    }
-  }
-  hulk.smash();
+  console.log('Destruraciion de  Arreglos');
+  
+  const [ loki, hombre, araña  ] = avengers;
+  // console.log( loki );
+  // console.log( hombre );
+  console.log( araña );
+  const extraerArr = ([ loki, hombre]: any) => {
+    //const { nombre, poder } = avenger;
+    console.log(loki);
+    console.log(hombre);
+  };
+  extraerArr(avengers);
 })();
