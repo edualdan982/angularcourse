@@ -1,14 +1,20 @@
 "use strict";
 //funcion anomina no invicada
 (() => {
-    console.log('Inicio');
-    const prom1 = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            reject('Se termino el timeout');
-        }, 1000);
-    });
-    prom1
-        .then(mensaje => console.log(mensaje))
-        .catch(err => console.warn(err));
-    console.log('Fin');
+    const retirarDinero = (montoRetirar) => {
+        let dineroActual = 1000;
+        //console.log('Hola Mundo');
+        return new Promise((resolve, reject) => {
+            if (montoRetirar > dineroActual) {
+                reject('No hay sufucientes  fondos');
+            }
+            else {
+                dineroActual -= montoRetirar;
+                resolve(dineroActual);
+            }
+        });
+    };
+    retirarDinero(500)
+        .then(montoActual => console.log(`Me queda ${montoActual}`))
+        .catch(console.warn);
 })();
