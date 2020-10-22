@@ -1,14 +1,24 @@
 "use strict";
 //funcion anomina no invicada
 (function () {
-    function activar(quien, momento, objeto) {
-        if (objeto === void 0) { objeto = 'batiseñal'; }
-        if (momento) {
-            console.log(quien + " activ\u00F3 la " + objeto + " en la " + momento);
+    var niFuncion = function (a) {
+        return a;
+    };
+    var miFuncioF = function (a) { return a.toUpperCase(); };
+    var sumarN = function (a, b) {
+        return a + b;
+    };
+    var sumarF = function (a, b) { return a + b; };
+    console.log(sumarN(4, 5));
+    console.log(sumarF(4, 5));
+    var hulk = {
+        nombre: 'Hulk',
+        smash: function () {
+            var _this = this;
+            setTimeout(function () {
+                console.log(_this.nombre + " smash!!!!");
+            }, 1000);
         }
-        else {
-            console.log(quien + " activ\u00F3 la " + objeto);
-        }
-    }
-    activar('Gordon', 'batiseñal', 'tarde');
+    };
+    hulk.smash();
 })();
