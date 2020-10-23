@@ -1,20 +1,16 @@
 "use strict";
 //funcion anomina no invicada
 (() => {
-    const retirarDinero = (montoRetirar) => {
-        let dineroActual = 1000;
-        //console.log('Hola Mundo');
-        return new Promise((resolve, reject) => {
-            if (montoRetirar > dineroActual) {
-                reject('No hay sufucientes  fondos');
-            }
-            else {
-                dineroActual -= montoRetirar;
-                resolve(dineroActual);
-            }
-        });
+    const enviarMission = (xmen) => {
+        console.log(`Enviando a ${xmen.nombre} a la misión.`);
     };
-    retirarDinero(500)
-        .then(montoActual => console.log(`Me queda ${montoActual}`))
-        .catch(console.warn);
+    const regresarAlCuartel = (xmen) => {
+        console.log(`Enviando a ${xmen.nombre} al cuartel.`);
+    };
+    const wolverine = {
+        nombre: 'Logan',
+        edad: 60,
+    };
+    enviarMission(wolverine);
+    regresarAlCuartel(wolverine);
 })();
